@@ -7,9 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <button @click="mailGenerator">random mail</button>
+        <div class="email" v-for="(mail, i) in email">
+            <h1> {{ email[i] }} </h1>
+        </div>
+        
 
+    </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="main.js"></script>
 </body>
