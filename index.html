@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="root">
-        <button @click="mailGenerator" :disabled="email.length == 10">random mail</button>
+        <button @click="mailGenerator" :disabled="isActive">random mail</button>
         <div class="email">
             <h1 v-if="email.length == 10" v-for="mail in email"> {{ mail }} </h1>
         </div>
