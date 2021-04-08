@@ -8,9 +8,9 @@
 </head>
 <body>
     <div id="root">
-        <button @click="mailGenerator">random mail</button>
-        <div class="email" v-for="(mail, i) in email">
-            <h1> {{ email[i] }} </h1>
+        <button @click="mailGenerator" :disabled="email.length == 10">random mail</button>
+        <div class="email">
+            <h1 v-if="email.length == 10" v-for="mail in email"> {{ mail }} </h1>
         </div>
         
 
